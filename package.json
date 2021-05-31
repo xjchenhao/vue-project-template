@@ -12,7 +12,8 @@
     "ant-design-vue": "^2.1.6",
     "less": "^4.1.1",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.8"
+    "vue-router": "^4.0.8",
+    "lint-staged": "^11.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.2",
@@ -21,5 +22,14 @@
     "eslint": "^7.27.0",
     "eslint-config-egg": "^9.0.0",
     "eslint-plugin-vue": "^7.9.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
