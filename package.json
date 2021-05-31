@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix --ext .js,.vue src"
   },
   "dependencies": {
     "ant-design-vue": "^2.1.6",
@@ -15,6 +17,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.2",
     "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.3.4"
+    "vite": "^2.3.4",
+    "eslint": "^7.27.0",
+    "eslint-config-egg": "^9.0.0",
+    "eslint-plugin-vue": "^7.9.0"
   }
 }
